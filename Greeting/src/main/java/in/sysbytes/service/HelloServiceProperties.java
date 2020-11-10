@@ -49,4 +49,29 @@ public class HelloServiceProperties {
     public void setNightMessage(String nightMessage) {
         this.nightMessage = nightMessage;
     }
+
+    private Retry retry = new Retry();
+
+    public Retry getRetry(){
+        return retry;
+    }
+
+    protected static class Retry{
+        private Integer numOfRetries = 3;
+        private Integer multiplyfactor = 1;
+        public Integer getNumOfRetries(){
+            return numOfRetries;
+        }
+        public Integer getMultiplyfactor(){
+            return multiplyfactor;
+        }
+
+        public void setNumOfRetries(Integer numOfRetries){
+            this.numOfRetries = numOfRetries;
+        }
+
+        public void setMultiplyfactor(Integer multiplyfactor){
+            this.multiplyfactor = multiplyfactor;
+        }
+    }
 }

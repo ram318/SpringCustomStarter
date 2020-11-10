@@ -11,6 +11,9 @@ public class HelloServiceImpl implements HelloService{
         String userName = greeterProperties.getUserName() == null
             ? "'Default user'"
             : greeterProperties.getUserName();
+
+        Integer numOfRetries = greeterProperties.getRetry().getNumOfRetries();
         System.out.println("Hello "+userName);
+        System.out.println("Num of retries " +numOfRetries);
     }
 }
